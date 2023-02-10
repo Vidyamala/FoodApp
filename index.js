@@ -5,6 +5,6 @@ app.use(bodyparse.json());
 const cors=require('cors');
 app.use(cors());
 const db=require("./Model");
-
+require("./Routes/Roles_route")(app)
 
 app.listen(8000,()=>{console.log("Application started in the port 8000")});

@@ -39,9 +39,10 @@ db.food.belongsTo(db.category);
 db.food.belongsToMany(db.cart,{through:"foodcart"});
 db.cart.belongsToMany(db.food,{through:"foodcart"});
 
-sequelize.sync({force:false})
+sequelize.sync({force:true})
 .then(()=>{
     console.log("DB synced");
 }).catch((err)=>{
     console.log(err.message)
 })
+module.exports=db;
