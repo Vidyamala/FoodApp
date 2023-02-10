@@ -10,7 +10,7 @@ module.exports=(sequelize,Sequelize)=>{
             unique:true
         },
         address:{
-            type:Sequelize.text
+            type:Sequelize.TEXT
         },
         contact:{
             type:Sequelize.INTEGER,
