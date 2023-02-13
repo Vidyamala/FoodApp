@@ -35,3 +35,15 @@ exports.deleteByName=async (req,res)=>{
         res.status(500).send({message:`Something went wrong! ${err.message}`})
     }
 }
+
+exports.getRoleByName=async (req,res)=>{
+    const {rolename}=req.body;
+    try{
+        const rolee=await role.findOne({where:{name:rolename}});
+console.log(rolee);
+res.send("Success");
+    }
+    catch(err){
+        res.status(500).send(`Something went wrong! Error message: ${err.me}`);
+    }
+}

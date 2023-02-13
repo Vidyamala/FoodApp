@@ -19,9 +19,13 @@ module.exports=(sequlize,Sequelize)=>{
             unique:true
         },
         mobile:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.STRING,
             allowNull:false,
             unique:true
+        },
+        isVerified:{
+            type:Sequelize.BOOLEAN,
+            defaultValue:false
         }
     }
     )
